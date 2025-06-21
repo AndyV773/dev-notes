@@ -17,7 +17,7 @@
   --tertiary-text: #666;
   --anchor:  rgba(156, 173, 70, 0.9);
   --primary-nav: linear-gradient(to top, rgba(42, 111, 151, 0.3) 0%, rgb(42, 111, 151) 10%);
-  --secondary-nav: linear-gradient(to bottom, rgba(42, 111, 151, 0.3) 0%, rgb(1, 58, 99) 10%, rgb(1, 58, 99) 80%, rgba(0, 0, 0, 0) 100%);
+  --secondary-nav: linear-gradient(to bottom, rgba(1, 42, 74, 0.3) 0%, rgb(1, 42, 74) 10%, rgb(1, 42, 74) 80%, rgba(0, 0, 0, 0) 100%);
   --primary-gradient: linear-gradient(to right, #012A4A, #A9D6E5);
   --secondary-gradient: linear-gradient(to right, #012A4A, #A9D6E5);
   --primary-fade: rgba(44, 125, 160, 0.9);
@@ -172,6 +172,24 @@ ol {
 }
 
 /* ----------------------------------------- code block */
+.code-block {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: fit-content;
+  min-width: 180px;
+}
+
+.code-block pre {
+  width: 100%;
+  margin: 1em 0 1em 0;
+}
+
+.code-block code {
+  padding: 0.5em;
+  margin: 0
+}
+
 .code-title {
   position: absolute;
   top: 3px;
@@ -204,21 +222,6 @@ ol {
   pointer-events: auto;
 }
 
-.code-block {
-  position: relative;
-  display: flex;
-  width: 100%;
-}
-
-.code-block pre {
-  width: 100%;
-  margin: 1em 0 1em 0;
-}
-
-.code-block code {
-  padding: 0.5em;
-  margin: 0
-}
 
 .copy-icon {
   position: absolute;
@@ -231,7 +234,7 @@ ol {
 }
 
 .check {
-  color: chartreuse;
+  color: chartreuse !important;
   cursor: default;
 }
 
@@ -252,6 +255,7 @@ footer ul {
 }
 
 /* ----------------------------------------- media queries */
+/* ----------------------------------------- 768px */
 @media (min-width: 768px) {
   nav {
     display: block;
@@ -276,41 +280,14 @@ footer ul {
   }
 }
 
+/* ----------------------------------------- 1280px */
 @media (min-width: 1280px) {
-  .code-title {
-    top: 20px !important;
-    left: 10px !important;
-  }
-
-  .copy-msg {
-    top: 21px !important;
-    right: 30px !important;
-  }
-
-  .copy-icon {
-    top: 18px !important;
-    right: 10px !important;
-  }
-
   .copy-icon:hover {
     color: #fafafa;
   }
 }
 
+/* ----------------------------------------- 1680px */
 @media (min-width: 1680px) {
-  .code-title {
-    top: 26px !important;
-    left: 12px !important;
-  }
-
-  .copy-msg {
-    top: 26px !important;
-    margin-right: 5px;
-    /* right: 2px !important; */
-  }
-
-  .copy-icon {
-    top: 22px !important;
-    right: 12px !important;
-  }
+  
 }
