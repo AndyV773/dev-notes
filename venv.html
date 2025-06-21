@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>7-8.dev | venv</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="7-8.dev - Developer Notes" />
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Andrew Veness",
+        "url": "https://7-8.dev",
+        "sameAs": ["https://www.linkedin.com/in/andy-veness-4113a0309", "https://github.com/AndyV773"]
+      }
+    </script>
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="7-8.dev - Developer Notes" />
+    <meta property="og:description" content="Quick Code References" />
+    <meta property="og:image" content="https://7-8.dev/images/main.jpg" />
+    <meta property="og:url" content="https://7-8.dev/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="7-8.dev - Developer Notes" />
+    <meta name="twitter:description" content="Quick Code References" />
+    <meta name="twitter:image" content="https://7-8.dev/images/main.jpg" />
+
+    <!-- favfa-regular -->
+    <link rel="shortcut fa-regular" type="image/fa-regular" href="favfa-regular_io/favfa-regular.ico" />
+
+    <!-- Load Highlight.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark-dimmed.min.css"
+    />
+    <!-- Load Highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Language support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/powershell.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body class="flex">
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="title">7-8.dev</a>
+      <input type="checkbox" id="nav-toggle" name="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="learn-more.html">Learn More</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <div class="inner">
+        <h1 class="major">Virtual Environment (venv)</h1>
+        <hr />
+        <section>
+          <h2>PowerShell & Bash</h2>
+          <ol>
+            <li>
+              <p>
+                This command creates a new folder called viron (you can name it anything) containing a clean Python
+                environment.
+              </p>
+              <div class="code-block">
+                <p class="code-title">POWERSHELL</p>
+                <p class="copy-msg">Copied!</p>
+                <i class="fa-regular fa-clone copy-icon"></i>
+                <pre><code class="language-powershell">
+python -m venv viron</code></pre>
+              </div>
+              <div class="code-block">
+                <p class="code-title">BASH</p>
+                <p class="copy-msg">Copied!</p>
+                <i class="fa-regular fa-clone copy-icon"></i>
+                <pre><code class="language-bash">
+python3 -m venv viron</code></pre>
+              </div>
+            </li>
+            <li>
+              <p>
+                Activate the virtual environment. This changes the shell prompt to show (viron) indicating the venv is
+                active.
+              </p>
+              <div class="code-block">
+                <p class="code-title">POWERSHELL</p>
+                <p class="copy-msg">Copied!</p>
+                <i class="fa-regular fa-clone copy-icon"></i>
+                <pre><code class="language-powershell">
+.\viron\Scripts\Activate</code></pre>
+              </div>
+              <div class="code-block">
+                <p class="code-title">BASH</p>
+                <p class="copy-msg">Copied!</p>
+                <i class="fa-regular fa-clone copy-icon"></i>
+                <pre><code class="language-bash">
+source viron/bin/activate</code></pre>
+              </div>
+            </li>
+            <li>
+              <p>Deactivate the virtual environment. Returns you to your normal system environment.</p>
+              <div class="code-block">
+                <p class="code-title">POWERSHELL</p>
+                <p class="copy-msg">Copied!</p>
+                <i class="fa-regular fa-clone copy-icon"></i>
+                <pre><code class="language-powershell">
+deactivate</code></pre>
+              </div>
+              <div class="code-block">
+                <p class="code-title">BASH</p>
+                <p class="copy-msg">Copied!</p>
+                <i class="fa-regular fa-clone copy-icon"></i>
+                <pre><code class="language-bash">
+deactivate</code></pre>
+              </div>
+            </li>
+          </ol>
+          <p> You can also enable automatic environment activation in VS Code when opening a new terminal. </p>
+          <ol>
+            <li>
+              <p> press <code>Ctrl + P</code> or <code>Cmd + P</code> to open the command palette. </p>
+            </li>
+            <li>
+              <p>
+                Enter <code>settings.json</code> and open it. This will create a new <code>settings.json</code> file in
+                your projects folder.
+              </p>
+            </li>
+            <li>
+              <p> Add the follow code and save <code>Ctrl + S</code> or <code>Cmd + S</code>. </p>
+              <div class="code-block">
+                <p class="code-title">JSON</p>
+                <p class="copy-msg">Copied!</p>
+                <i class="fa-regular fa-clone copy-icon"></i>
+                <pre><code class="language-json">
+"python.terminal.activateEnvironment": true</code></pre>
+              </div>
+            </li>
+          </ol>
+          <p>
+            Note: Sometimes you may still need to manually reset the terminal, and the (viron) label might not appear in
+            the prompt even though the environment is activated.
+          </p>
+          <a href="#">Top &uarr;</a>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="inner">
+        <ul class="alt">
+          <li>
+            &copy; 7-8.dev
+            <span id="year"></span>. All rights reserved.
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

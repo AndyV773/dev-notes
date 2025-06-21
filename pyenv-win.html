@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>7-8.dev | PyEnv-Win</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="7-8.dev - Developer Notes" />
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Andrew Veness",
+        "url": "https://7-8.dev",
+        "sameAs": ["https://www.linkedin.com/in/andy-veness-4113a0309", "https://github.com/AndyV773"]
+      }
+    </script>
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="7-8.dev - Developer Notes" />
+    <meta property="og:description" content="Quick Code References" />
+    <meta property="og:image" content="https://7-8.dev/images/main.jpg" />
+    <meta property="og:url" content="https://7-8.dev/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="7-8.dev - Developer Notes" />
+    <meta name="twitter:description" content="Quick Code References" />
+    <meta name="twitter:image" content="https://7-8.dev/images/main.jpg" />
+
+    <!-- favfa-regular -->
+    <link rel="shortcut fa-regular" type="image/fa-regular" href="favfa-regular_io/favfa-regular.ico" />
+
+    <!-- Load Highlight.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark-dimmed.min.css"
+    />
+    <!-- Load Highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Language support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/powershell.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body class="flex">
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="title">7-8.dev</a>
+      <input type="checkbox" id="nav-toggle" name="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="learn-more.html">Learn More</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <div class="inner">
+        <h1 class="major">PyEnv-Win</h1>
+        <hr />
+        <section>
+          <h2>Quick Commands</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Command</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="max--width">
+                    <div class="code-block">
+                      <p class="code-title">SHELL</p>
+                      <p class="copy-msg">Copied!</p>
+                      <i class="fa-regular fa-clone copy-icon"></i>
+                      <pre><code class="language-powershell">
+pyenv install --list</code></pre>
+                    </div>
+                  </td>
+                  <td> Show all available Python versions to install </td>
+                </tr>
+                <tr>
+                  <td class="max--width">
+                    <div class="code-block">
+                      <p class="code-title">SHELL</p>
+                      <p class="copy-msg">Copied!</p>
+                      <i class="fa-regular fa-clone copy-icon"></i>
+                      <pre><code class="language-powershell">
+pyenv install 3.12.1</code></pre>
+                    </div>
+                  </td>
+                  <td> Install a specific Python version </td>
+                </tr>
+                <tr>
+                  <td class="max--width">
+                    <div class="code-block">
+                      <p class="code-title">SHELL</p>
+                      <p class="copy-msg">Copied!</p>
+                      <i class="fa-regular fa-clone copy-icon"></i>
+                      <pre><code class="language-powershell">
+pyenv uninstall 3.12.1</code></pre>
+                    </div>
+                  </td>
+                  <td> Remove an installed version </td>
+                </tr>
+                <tr>
+                  <td class="max--width">
+                    <div class="code-block">
+                      <p class="code-title">SHELL</p>
+                      <p class="copy-msg">Copied!</p>
+                      <i class="fa-regular fa-clone copy-icon"></i>
+                      <pre><code class="language-powershell">
+pyenv versions</code></pre>
+                    </div>
+                  </td>
+                  <td> List installed versions </td>
+                </tr>
+                <tr>
+                  <td class="max--width">
+                    <div class="code-block">
+                      <p class="code-title">SHELL</p>
+                      <p class="copy-msg">Copied!</p>
+                      <i class="fa-regular fa-clone copy-icon"></i>
+                      <pre><code class="language-powershell">
+pyenv --version</code></pre>
+                    </div>
+                  </td>
+                  <td> List current running version </td>
+                </tr>
+                <tr>
+                  <td class="max--width">
+                    <div class="code-block">
+                      <p class="code-title">SHELL</p>
+                      <p class="copy-msg">Copied!</p>
+                      <i class="fa-regular fa-clone copy-icon"></i>
+                      <pre><code class="language-powershell">
+pyenv global 3.12.1</code></pre>
+                    </div>
+                  </td>
+                  <td> Set global (default) Python version </td>
+                </tr>
+                <tr>
+                  <td class="max--width">
+                    <div class="code-block">
+                      <p class="code-title">SHELL</p>
+                      <p class="copy-msg">Copied!</p>
+                      <i class="fa-regular fa-clone copy-icon"></i>
+                      <pre><code class="language-powershell">
+pyenv local 3.12.1</code></pre>
+                    </div>
+                  </td>
+                  <td> Set local Python version (per project directory) </td>
+                </tr>
+                <tr>
+                  <td class="max--width">
+                    <div class="code-block">
+                      <p class="code-title">SHELL</p>
+                      <p class="copy-msg">Copied!</p>
+                      <i class="fa-regular fa-clone copy-icon"></i>
+                      <pre><code class="language-powershell">
+pyenv shell 3.12.1</code></pre>
+                    </div>
+                  </td>
+                  <td> Temporarily set Python version for the shell </td>
+                </tr>
+                <tr>
+                  <td class="max--width">
+                    <div class="code-block">
+                      <p class="code-title">SHELL</p>
+                      <p class="copy-msg">Copied!</p>
+                      <i class="fa-regular fa-clone copy-icon"></i>
+                      <pre><code class="language-powershell">
+pyenv rehash</code></pre>
+                    </div>
+                  </td>
+                  <td> Rebuild pyenv shims (usually automatic) </td>
+                </tr>
+                <tr>
+                  <td class="max--width">
+                    <div class="code-block">
+                      <p class="code-title">SHELL</p>
+                      <p class="copy-msg">Copied!</p>
+                      <i class="fa-regular fa-clone copy-icon"></i>
+                      <pre><code class="language-powershell">
+pyenv which python</code></pre>
+                    </div>
+                  </td>
+                  <td> Show full path to the selected Python binary </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>
+                    <a href="#">Top &uarr;</a>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </section>
+        <section>
+          <h3>How to Install PyEnv on Windows</h3>
+          <ol>
+            <li>
+              <p>
+                Download pyenv-win ZIP-archive:
+                <a class="y-text" href="https://github.com/pyenv-win/pyenv-win/archive/master.zip">pyenv-win</a>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Create a new folder .pyenv in your user folder with the name .pyenv. You can do this using the Explorer
+                or the following PowerShell command:
+              </p>
+              <div class="code-block">
+                <p class="code-title">POWERSHELL</p>
+                <p class="copy-msg">Copied!</p>
+                <i class="fa-regular fa-clone copy-icon"></i>
+                <pre><code class="language-powershell">
+mkdir $HOME/.pyenv</code></pre>
+              </div>
+            </li>
+
+            <li>
+              <p>
+                Extract the ZIP-archive and copy the pyenv-win folder and the .version file from the pyenv-win-master
+                folder into the newly created .pyenv folder in your user folder.
+              </p>
+            </li>
+
+            <li>
+              <p> Set the environment variables PYENV and PYENV_HOME that point to the installation folder. </p>
+              <div class="code-block">
+                <p class="code-title">POWERSHELL</p>
+                <p class="copy-msg">Copied!</p>
+                <i class="fa-regular fa-clone copy-icon"></i>
+                <pre><code class="language-powershell">
+[System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
+[System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")</code></pre>
+              </div>
+            </li>
+
+            <li>
+              <p>
+                Add the bin folder to the PATH variable. Such that pyenv can be found when using the command line.
+              </p>
+              <div class="code-block">
+                <p class="code-title">POWERSHELL</p>
+                <p class="copy-msg">Copied!</p>
+                <i class="fa-regular fa-clone copy-icon"></i>
+                <pre><code class="language-powershell">
+[System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + $env:USERPROFILE + "\.pyenv\pyenv-win\shims;" + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")</code></pre>
+              </div>
+            </li>
+
+            <li>
+              <p>
+                Open PowerShell as an administrator, press <code>Windows + R</code>, type 'powershell', then press
+                <code>Ctrl + Shift + Enter</code> to launch it with administrative privileges.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Enter the following command into the PowerShell to enable the execution of scripts. Press A to choose
+                Yes to ALL. Afterward, you can close this PowerShell window and open a new one without admin privileges.
+              </p>
+              <div class="code-block">
+                <p class="code-title">POWERSHELL</p>
+                <p class="copy-msg">Copied!</p>
+                <i class="fa-regular fa-clone copy-icon"></i>
+                <pre><code class="language-powershell">
+Set-ExecutionPolicy unrestricted</code></pre>
+              </div>
+            </li>
+
+            <li>
+              Now, you can run pyenv by entering.
+              <div class="code-block">
+                <p class="code-title">POWERSHELL</p>
+                <p class="copy-msg">Copied!</p>
+                <i class="fa-regular fa-clone copy-icon"></i>
+                <pre><code class="language-powershell">
+pyenv</code></pre>
+              </div>
+            </li>
+
+            <li>
+              <p>
+                If you encounter a security warning from where you have to choose if you want to run pyenv you can
+                disable this warning by “unblocking” the pyenv script with the following command.
+              </p>
+              <div class="code-block">
+                <p class="code-title">POWERSHELL</p>
+                <p class="copy-msg">Copied!</p>
+                <i class="fa-regular fa-clone copy-icon"></i>
+                <pre><code class="language-powershell">
+Unblock-File $HOME/.pyenv/pyenv-win/bin/pyenv.ps1</code></pre>
+              </div>
+            </li>
+          </ol>
+        </section>
+        <section>
+          <table>
+            <thead>
+              <tr>
+                <th>Quick Links</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a
+                    href="https://k0nze.dev/posts/install-pyenv-venv-vscode/"
+                    alt="takes you to another website"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    How to Install Multiple Python Versions on your Computer and use them with VSCode
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>
+                  <a href="#">Top &uarr;</a>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="inner">
+        <ul class="alt">
+          <li>
+            &copy; 7-8.dev
+            <span id="year"></span>. All rights reserved.
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

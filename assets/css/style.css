@@ -1,0 +1,316 @@
+/* imported google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* ----------------------------------------- general styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg: #013A63;
+  --secondary-bg: #012A4A;
+  --tertiary-bg: #333;
+  --primary-text: #fff;
+  --secondary-text: #000;
+  --tertiary-text: #666;
+  --anchor:  rgba(156, 173, 70, 0.9);
+  --primary-nav: linear-gradient(to top, rgba(42, 111, 151, 0.3) 0%, rgb(42, 111, 151) 10%);
+  --secondary-nav: linear-gradient(to bottom, rgba(42, 111, 151, 0.3) 0%, rgb(1, 58, 99) 10%, rgb(1, 58, 99) 80%, rgba(0, 0, 0, 0) 100%);
+  --primary-gradient: linear-gradient(to right, #012A4A, #A9D6E5);
+  --secondary-gradient: linear-gradient(to right, #012A4A, #A9D6E5);
+  --primary-fade: rgba(44, 125, 160, 0.9);
+  --secondary-fade: rgba(44, 125, 160, 0.9);
+  --table-fade: rgba(255, 255, 255, 0.05);
+  --table-border: rgba(255, 255, 255, 0.15);
+  --font-style: "Great Vibes", cursive;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: var(--font-style);
+  color: var(--primary-text);
+  transform: rotate(-5deg);
+  font-size: 160%;
+  letter-spacing: 3px;
+}
+
+header {
+  background: var(--primary-nav);
+  color: var(--primary-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  height: 7%;
+  padding: 10px;
+}
+
+main {
+  flex: 1 0 auto;
+  margin: 3rem 1rem;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background: var(--primary-gradient);
+  margin: 1em 0;
+}
+
+li a,
+td a {
+  color: var(--anchor);
+  font-weight: 700;
+}
+
+.max--width {
+  max-width: 200px !important;
+}
+
+/* ----------------------------------------- nav */
+nav {
+  background: var(--secondary-nav);
+  position: absolute;
+  width: 100%;
+  display: none;
+  top: 100%;
+  right: 0;
+}
+
+#menu {
+  font-size: 120%;
+  letter-spacing: 4px;
+  list-style-type: none;
+}
+
+#menu>li {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#menu li a {
+  color: var(--primary-text);
+  text-decoration: none;
+}
+
+#nav-toggle:checked~nav {
+  display: block;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  font-size: 2rem;
+}
+
+.active {
+  color: var(--anchor) !important;
+  border-bottom: 2px solid var(--anchor) !important;
+}
+
+/* ----------------------------------------- table */
+.table-wrapper {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table th {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0 0.75em 0.75em 0.75em;
+  text-align: left;
+}
+
+table tbody tr {
+  border: solid 1px var(--table-border);
+  border-left: 0;
+  border-right: 0;
+}
+
+table tbody tr:nth-child(2n + 1) {
+  background-color: var(--table-fade);
+}
+
+table td {
+  min-width: 200px;
+  padding: 0.75em;
+}
+
+/* ----------------------------------------- list */
+ol {
+  padding-left: 30px;
+}
+
+.alt {
+  list-style: none;
+  padding: 0;  
+}
+
+/* ----------------------------------------- code block */
+.code-title {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  color: var(--tertiary-text);
+  font-size: 70%;
+  font-weight: 900;
+  user-select: none;
+  cursor: default;
+  z-index: 8888;
+}
+
+.copy-msg {
+  position: absolute;
+  top: 6px;
+  right: 24px;
+  background: var(--tertiary-bg);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 70%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+  z-index: 8888;
+}
+
+.copy-msg.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.code-block {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.code-block pre {
+  width: 100%;
+  margin: 1em 0 1em 0;
+}
+
+.code-block code {
+  padding: 0.5em;
+  margin: 0
+}
+
+.copy-icon {
+  position: absolute;
+  top: 17px;
+  right: 4px;
+  cursor: pointer;
+  color: var(--tertiary-text);
+  font-size: 1rem;
+  z-index: 8888;
+}
+
+.check {
+  color: chartreuse;
+  cursor: default;
+}
+
+code {
+  color: chartreuse !important;
+}
+
+/* ----------------------------------------- footer */
+footer {
+  background-color: var(--secondary-bg);
+  color: var(--tertiary-text);
+  width: 100%;
+  padding: 2rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+/* ----------------------------------------- media queries */
+@media (min-width: 768px) {
+  nav {
+    display: block;
+    position: relative;
+    background: none;
+    width: fit-content;
+    right: 7rem;
+    top: 0;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  #menu {
+    display: flex;
+  }
+
+  #menu>li {
+    padding-left: 2rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .code-title {
+    top: 20px !important;
+    left: 10px !important;
+  }
+
+  .copy-msg {
+    top: 21px !important;
+    right: 30px !important;
+  }
+
+  .copy-icon {
+    top: 18px !important;
+    right: 10px !important;
+  }
+
+  .copy-icon:hover {
+    color: #fafafa;
+  }
+}
+
+@media (min-width: 1680px) {
+  .code-title {
+    top: 26px !important;
+    left: 12px !important;
+  }
+
+  .copy-msg {
+    top: 26px !important;
+    margin-right: 5px;
+    /* right: 2px !important; */
+  }
+
+  .copy-icon {
+    top: 22px !important;
+    right: 12px !important;
+  }
+}
